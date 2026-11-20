@@ -2,6 +2,6 @@
 // Kosongkan = game tetap jalan offline (guest), fitur online nonaktif.
 window.PR_CONFIG = {
   SUPABASE_URL: 'https://bamuuoictkbkheshmsuv.supabase.co/rest/v1/',
-  SUPABASE_ANON_KEY: 'sb_publishable_dZfb6rmHWfQ64QJIIrEw9Q_jJqXPWYJ',
-  EMAIL_DOMAIN: 'pixelrealm.app' // email palsu internal: username@domain. Ganti jika Supabase menolak domain ini.
+  SUPABASE_ANON_KEY: 'sb_publishable_9T7F5v3aZZOa0Ro4YLG2QA_tFXJu1Yd',
+  EMAIL_DOMAIN: 'chaknnelyt@gmail.com' // email palsu internal: username@domain. Ganti jika Supabase menolak domain ini.
 };
