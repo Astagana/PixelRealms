@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Pixel Realm</title>
+<meta name="theme-color" content="#2b1d14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="flash"></div>
+
+<div id="hud">
+  <div class="pn gemsbox"><canvas id="gi" width="8" height="8"></canvas><b id="gems">0</b></div>
+  <div class="pn wbox"><span id="wname">START</span></div>
+  <div class="btns">
+    <button class="btn" id="bW">Worlds</button>
+    <button class="btn" id="bS">Shop</button>
+    <button class="btn" id="bM">Sound on</button>
+  </div>
+</div>
+
+<div id="hotbar"></div>
+<div id="toast"></div>
+
+<div id="touch">
+  <div class="tl"><button id="tL">&lt;</button><button id="tR">&gt;</button></div>
+  <button id="tJ">Jump</button>
+</div>
+
+<div class="modal" id="mW" hidden>
+  <div class="pn box">
+    <h2>Go to a world</h2>
+    <p>Same name, same map. Every world saves on this device.</p>
+    <input id="wi" maxlength="16" placeholder="World name" autocomplete="off" autocapitalize="characters" spellcheck="false">
+    <div class="row"><button class="btn go" id="wGo">Go</button><button class="btn" id="wHome">Start</button><button class="btn" data-x>Close</button></div>
+    <div id="wl"></div>
+  </div>
+</div>
+
+<div class="modal" id="mS" hidden>
+  <div class="pn box">
+    <h2>Shop</h2>
+    <p>Spend the gems you dig up.</p>
+    <div id="sl"></div>
+    <div class="row"><button class="btn" data-x>Close</button></div>
+  </div>
+</div>
+
+<div id="title">
+  <h1>Pixel<br>Realm</h1>
+  <p class="sub">Dig, build, plant, repeat. Every world is a block map you can change.</p>
+  <button class="btn go big" id="play">Play</button>
+  <div class="pn help">
+    <span>A / D or arrows: walk</span>
+    <span>Space or W: jump</span>
+    <span>Hold click or tap: break with Fist, place with a block</span>
+    <span>1-9: pick a hotbar slot</span>
+  </div>
+</div>
+<script src="game.js"></script>
+<script>if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{})</script>
+</body>
+</html>
